@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d immage rotation</title>
+    <link rel="stylesheet" href="./cube.css">
+</head>
+<body>
+    <div class="box">
+        <span class="img1"><img src="./img1.jpg" alt=""></span>
+        <span class="img2"><img src="./img2.jpg" alt=""></span>
+        <span class="img3"><img src="./img3.jpg" alt=""></span>
+        <span class="img4"><img src="./img4.jpg" alt=""></span>
+        <span class="img5"><img src="./img5.jpg" alt=""></span>
+        <span class="img6"><img src="./img6.jpg" alt=""></span>
+    </div>
+    <script>
+        let box = document.querySelector('.box');        
+        window.onmousemove = function(e){
+            let x = e.clientX;
+            let y = e.clientY;
+            box.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+        }
+    </script> 
+</body>
+</html>
